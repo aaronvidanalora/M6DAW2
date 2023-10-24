@@ -71,10 +71,10 @@ function modificarFecha2() {
     const minutos = fecha.getMinutes().toString().padStart(2, '0');
     const segundos = fecha.getSeconds().toString().padStart(2, '0');
 
-    // Formatear la fecha en el formato deseado
+    // sacar la fecha en el formato 
     const fechaFinal = `${anyo}/${mes}/${dia}T${hora}:${minutos}:${segundos}`;
 
-    // Mostrar el resultado en el elemento con ID "resultFecha2"
+   
     document.querySelector("#resultFecha2").innerHTML = fechaFinal;
 }
 
@@ -167,14 +167,14 @@ function registraPartida(partida) {
     // Obtener las datos del localstorage
     const datos = ls.getDades();
   
-    // Agregar la partida al array "partidas"
+    // meter el array a partida
     datos.partidas.push(partida);
   
-    // Guardar los datos actualizados en el localstorage
+    // guardar en localstorage
     ls.setDades(datos);
   }
   
-  // Ejemplo de una partida
+ 
   const nuevaPartida = {
     avatar: 'imagen2.png',
     nick: 'EJERCICIO 5',
@@ -182,10 +182,10 @@ function registraPartida(partida) {
     fecha: '23/09/05T13:12:00'
   };
   
-  // Llamar a la función para registrar la partida
+  // registrar partida
   registraPartida(nuevaPartida);
   
-  // Comprobar que el localstorage se ha actualizado correctamente
+  // actualizar local storage
   console.log(ls.getDades());
   
 
