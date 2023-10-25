@@ -9,12 +9,12 @@ function mostramos() {
     const inputPalabra = document.querySelector('#inputPalabra').value;
     document.querySelector('#juego').classList.remove("d-none");
     document.querySelector('#ventanaIntroPalabra').classList.add("d-none");
-    palabra = inputPalabra.toUpperCase().trim(); // Usa la variable global en lugar de declarar una nueva
+    palabra = inputPalabra.toUpperCase().trim(); // paso a mayusculas y quito espacios en blanco
     casilla = palabra.length;
     let meter = '';
 
     for (let i = 0; i < casilla; i++) {
-        meter += `<span id="casilla${[i]}" class="casilla">_</span>`;
+        meter += `<span id="casilla${[i]}" class="casilla">_</span>`; //pinto tantas casillas como letras tenga la palabra
     }
 
     document.querySelector('#casillas').innerHTML = meter;
